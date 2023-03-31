@@ -33,7 +33,8 @@ app.use(session({
     saveUninitialized: true,
   }));
 
-//reg
+////<------ Reg section ------>
+
 app.get("/reg", (req, res) => {
     res.render("reg")
 })
@@ -136,7 +137,8 @@ app.post("/reg", async (req, res) => {
     }
   });
   
-//login
+////<------ payment section ------>
+
 app.get("/", (req, res) => {
   res.render("login")
 })
@@ -167,7 +169,8 @@ app.post("/", async(req, res) => {
   }}
 })
 
-//details
+////<------ Tenant form section ------>
+
 app.get("/userdetail", (req, res) => {
   res.render("details")
 })
@@ -243,6 +246,8 @@ app.post("/userdetail", async(req, res) => {
   }}
 })
 
+//<------ Logout section ------>
+
 app.get("/logout", (req, res) => {
 req.session.destroy((err) => {
   if (err) {
@@ -256,4 +261,57 @@ req.session.destroy((err) => {
 app.listen(port, () => {
     console.log(`${port} running`)
 })
+
+
+//<------ payment section ------>
+
+app.get("/payment", (req, res) => {
+  const username = req.session.username;
+  res.render("payment",{username: username})
+})
+
+
+app.post("/payment", async(req, res) => {
+  const username = req.session.username;
+  try{
+      const currentDate = new Date();
+
+      const payment_Detail=new pay({
+        amount:req.body.amount,
+        username:req.body.username,
+        cardusername:req.body.cardusername,
+        cardNumber:req.body.cardNumber,
+        expirationMonth:req.body.expirationMonth,
+        expirationYear:req.body.expirationYear,
+        cvv:req.body.cvv,
+        date:currentDate,
+
+      })
+
+      const details=await payment_Detail.save()
+      
+      res.status(201).render("payment", { successMessage: "Payment submitted successfully!",username: username })
+
+
+
+  }
+  catch(error){{
+      res.status(400).send(error)
+  }}
+})
+
+app.get('/paymenthistory', async (req, res) => {
+  try {
+    // Retrieve payment history from the database
+    const payments = await pay.find({ username: req.session.username });
+
+    // Render the payment history page and pass in the payment data
+    res.render('paymenthistory', { payments });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send('Error retrieving payment history');
+  }
+});
+
+
 
