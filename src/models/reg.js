@@ -11,5 +11,4 @@ const regSchema = new mongoose.Schema({
 });
 
 const Reg = new mongoose.model("RegisterdUser", regSchema);
-
 module.exports = Reg;

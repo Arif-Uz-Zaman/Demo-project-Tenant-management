@@ -71,11 +71,11 @@ app.post("/reg", async (req, res) => {
           pass: "ueiomalbmyoqddil",
         },
       });
-  
+
       const verificationLink = `${req.protocol}://${req.get(
         "host"
       )}/reg/verify?token=${verificationToken}`;
-  
+    
       const mailOptions = {
         from: "online.hotel.reservation.system0@gmail.com",
         to: req.body.email,
@@ -126,7 +126,7 @@ app.post("/reg", async (req, res) => {
 
       await TempRegDetail.save();
   
-      // delete tempRegDetail from session
+      // deleting tempRegDetail from session
       delete req.session.tempRegDetail;
   
       res.render("login", { successMessage: "Your email has been verified successfully."});
