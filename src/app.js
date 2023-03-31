@@ -130,14 +130,14 @@ app.post("/reg", async (req, res) => {
       // deleting tempRegDetail from session
       delete req.session.tempRegDetail;
   
-      res.render("login", { successMessage: "Your email has been verified successfully."});
+      res.redirect("/verified");
     } catch (error) {
       console.log(error);
       res.status(500).send("Internal Server Error");
     }
   });
   
-////<------ payment section ------>
+////<------ Login section ------>
 
 app.get("/", (req, res) => {
   res.render("login")
@@ -312,6 +312,15 @@ app.get('/paymenthistory', async (req, res) => {
     res.status(500).send('Error retrieving payment history');
   }
 });
+
+
+//<-----account verify Success page back end----->
+
+
+app.get("/verified", (req, res) => {
+  res.render("verified")
+})
+
 
 
 
