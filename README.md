@@ -1,36 +1,36 @@
 # Tenant management [Cybernetikz-UAPCSE intern 2022 fall]
 
 A tenant management site project, created using MERN stack. Functionalities of the site include:
-1. Sign up form with email verification <span style="color:lightgreen">[COMPLETE]</span>
-2. Add user detail <span style="color:lightgreen">[COMPLETE]</span>
-3. Payment system/Bill upload <span style="color:lightgreen">[COMPLETE]</span>
-4. Payment tracking <span style="color:lightgreen">[COMPLETE]</span>
-5. Basic reporting <span style="color:yellow">[yet to be done]</span>
+1. Sign up form with email verification <span style="color:lightgreen">[COMPLETE]</span>🟢
+2. Add user detail <span style="color:lightgreen">[COMPLETE]</span>🟢
+3. Payment system/Bill upload <span style="color:lightgreen">[COMPLETE]</span>🟢
+4. Payment tracking <span style="color:lightgreen">[COMPLETE]</span>🟢
+5. Basic reporting <span style="color:yellow">[yet to be done]</span>🟡
 
-<h5><i>This project was made as part of an internship program arranged between Web Development, Analytics & SEO Agency Cybernetikz and Department of CSE, University of Asia Pacific.</i></h5>
+<h5><b><i>This project was made as part of an internship program arranged between Web Development, Analytics & SEO Agency Cybernetikz and Department of CSE, University of Asia Pacific.</i></b></h5>
 
-## Table of Contents
+## 🟣Table of Contents
 
 - [Tenant management \[Cybernetikz-UAPCSE intern 2022 fall\]](#tenant-management-cybernetikz-uapcse-intern-2022-fall)
-  - [Table of Contents](#table-of-contents)
-- [Installation](#installation)
-- [Usage](#usage)
-- [License and Contribution](#license-and-contribution)
+  - [🟣Table of Contents](#table-of-contents)
+- [🟣Installation](#installation)
+- [🟣Usage](#usage)
+- [🟣License and Contribution](#license-and-contribution)
 
- # Installation
+ # 🟣Installation
 
-Clone the repository to your local machine:<br>
-<i>`git clone https://github.com/your-username/your-repository.git`</i>
+1️⃣ Clone the repository to your local machine:<br>
+<i>`git clone https://github.com/Arif-Uz-Zaman/CyberNetickz-Demo-project-Tenant-management.git`</i>
 
-Install the dependencies for the server:<br>
-<i>`cd your-repository/server
+2️⃣ Install the dependencies for the server:<br>
+<i>`cd CyberNetickz-Demo-project-Tenant-management/server
 npm install`<br></i>
 
-Install the dependencies for the client:<br>
+3️⃣ Install the dependencies for the client:<br>
 <i>`cd ../client
 npm install`<br></i>
 
-install nodemon by using this command : <br>
+4️⃣ install nodemon by using this command : <br>
 <i>`npm i nodemon`</i>
 
 
@@ -41,8 +41,8 @@ Note: If you encounter any issues during installation, please refer to the docum
 
 These instructions assume that you have already set up the MERN stack on your local machine. If you haven't done so already, you'll need to install Node.js, MongoDB, and any other dependencies that your project requires before you can start the installation process.
 
-# Usage
-First  Start the development server:<br>
+# 🟣Usage
+▶ First  Start the development server:<br>
 <i>`cd ..
 npm run dev` <br></i>
 
@@ -51,7 +51,7 @@ also don't forget to open your mongodb compass  software and connect to the serv
 To see the website go to the browser and put this URL:
 localhost:3000
 
-# License and Contribution
+# 🟣License and Contribution
 
 MIT License
 
