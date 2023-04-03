@@ -20,10 +20,10 @@ A tenant management site project, created using MERN stack. Functionalities of t
  # 🟣Installation
 
 1️⃣ Clone the repository to your local machine:<br>
-<i>`git clone https://github.com/Arif-Uz-Zaman/CyberNetickz-Demo-project-Tenant-management.git`</i>
+<i>`git clone https://github.com/Arif-Uz-Zaman/Demo-project-Tenant-management.git`</i>
 
 2️⃣ Install the dependencies for the server:<br>
-<i>`cd CyberNetickz-Demo-project-Tenant-management/server
+<i>`cd Demo-project-Tenant-management/server
 npm install`<br></i>
 
 3️⃣ Install the dependencies for the client:<br>
